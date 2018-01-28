@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:300,400,400i,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:300,400,400i,500,600,700|Lato:700");
 /*! Karma-CSS v1.8.1 MIT License | http://karmacss.com | https://github.com/accentdesign/karma-css */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 html{
@@ -1410,42 +1410,44 @@ td{
 .table-hover tbody tr:hover{
   background-color:whitesmoke; }
 
-h1 small, #search-results h2 small, #search-results .main .section .toctree-wrapper .caption small, .main .section .toctree-wrapper #search-results .caption small, .h1 small, h2 small, .main .section .toctree-wrapper .caption small, .h2 small, h3 small, #search-results ul.search > li > a small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small{
-  font-size:65%;
-  line-height:1; }
+h1, #search-results h2, #search-results .main .section .toctree-wrapper .caption, .main .section .toctree-wrapper #search-results .caption, .h1, h2, .main .section .toctree-wrapper .caption, .h2, h3, #search-results ul.search > li > a, .h3, h4, .h4, h5, .h5, h6, .h6{
+  font-family:"Lato", sans-serif; }
+  h1 small, #search-results h2 small, #search-results .main .section .toctree-wrapper .caption small, .main .section .toctree-wrapper #search-results .caption small, .h1 small, h2 small, .main .section .toctree-wrapper .caption small, .h2 small, h3 small, #search-results ul.search > li > a small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small{
+    font-size:65%;
+    line-height:1; }
 
 h1, #search-results h2, #search-results .main .section .toctree-wrapper .caption, .main .section .toctree-wrapper #search-results .caption, .h1{
-  font-weight:400;
+  font-weight:700;
   margin:0 0 1.5rem;
   font-size:30px;
   line-height:1.2; }
 
 h2, .main .section .toctree-wrapper .caption, .h2{
-  font-weight:400;
+  font-weight:700;
   margin:0 0 1.5rem;
   font-size:22.5px;
   line-height:1.25; }
 
 h3, #search-results ul.search > li > a, .h3{
-  font-weight:400;
+  font-weight:700;
   margin:0 0 1.5rem;
   font-size:17.55px;
   line-height:1.3; }
 
 h4, .h4{
-  font-weight:400;
+  font-weight:700;
   margin:0 0 1.5rem;
   font-size:15px;
   line-height:1.35; }
 
 h5, .h5{
-  font-weight:400;
+  font-weight:700;
   margin:0 0 1.5rem;
   font-size:12.45px;
   line-height:1.5; }
 
 h6, .h6{
-  font-weight:400;
+  font-weight:700;
   margin:0 0 1.5rem;
   font-size:10.05px;
   line-height:1.6; }
@@ -1642,7 +1644,7 @@ header{
 .footer{
   color:#bcc3ca;
   padding-top:4rem;
-  padding-bottom:3rem; }
+  padding-bottom:4rem; }
 
 #search-results h2, #search-results .main .section .toctree-wrapper .caption, .main .section .toctree-wrapper #search-results .caption{
   margin-bottom:5rem; }
