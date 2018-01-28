@@ -3,7 +3,7 @@
  */
 
  .main .highlighted {
-    background: color(yellow);
+    background: lighten(color(yellow), 35%);
     display: inline-block;
     font-weight: bold;
     padding: 0 .6rem;

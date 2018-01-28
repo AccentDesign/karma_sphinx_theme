@@ -8,7 +8,7 @@
 {% block sidebar1 %}{% endblock %}
 {% block sidebar2 %}{% endblock %}
 
-{% block content %}
+{%- block header %}
     <header>
         <div class="container">
             <a class="site-title" href="{{ pathto('index') }}">
@@ -17,37 +17,58 @@
             <div class="site-description"></div>
         </div>
     </header>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-3">
-                {% include "searchbox.html" %}
-                <div class="toctree">
-                    {% block menu %}
-                        {% set global_toc = toctree(
-                            maxdepth=theme_navigation_depth|int,
-                            collapse=theme_collapse_navigation|tobool,
-                            includehidden=theme_includehidden|tobool,
-                            titles_only=theme_titles_only|tobool
-                        ) %}
-                        {% if global_toc %}
-                            {{ global_toc }}
-                        {% else %}
-                            <div class="local-toc">{{ toc }}</div>
-                        {% endif %}
-                    {% endblock %}
+{% endblock %}
+
+{%- block content %}
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    {% include "searchbox.html" %}
+                    <div class="toctree">
+                        {% block menu %}
+                            {% set global_toc = toctree(
+                                maxdepth=theme_navigation_depth|int,
+                                collapse=theme_collapse_navigation|tobool,
+                                includehidden=theme_includehidden|tobool,
+                                titles_only=theme_titles_only|tobool
+                            ) %}
+                            {% if global_toc %}
+                                {{ global_toc }}
+                            {% else %}
+                                <div class="local-toc">{{ toc }}</div>
+                            {% endif %}
+                        {% endblock %}
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-9">
-                <div class="main">
-                    {% block document %}
-                        {% block body %} {% endblock %}
-                    {% endblock %}
+                <div class="col-12 col-lg-9">
+                    <div class="main">
+                        {% block document %}
+                            {% block body %} {% endblock %}
+                        {% endblock %}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 {% endblock %}
 
-<div class="container">
-    {% block footer %}{% endblock %}
-</div>
+{%- block footer %}
+    <div class="footer" role="contentinfo">
+        <div class="container">
+        {%- if show_copyright %}
+        {%- if hasdoc('copyright') %}
+            {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+        {%- else %}
+            {% trans copyright=copyright|e %}&#169; Copyright {{ copyright }}.{% endtrans %}
+        {%- endif %}
+        {%- endif %}
+        {%- if last_updated %}
+        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+        {%- endif %}
+        {%- if show_sphinx %}
+        {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+        {%- endif %}
+        </div>
+    </div>
+{%- endblock %}
