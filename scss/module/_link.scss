@@ -1,0 +1,27 @@
+/* link
+ *
+ */
+
+a.headerlink {
+    visibility: hidden;
+    padding-left: .5rem;
+    opacity: .3;
+    &:hover {
+        opacity: .5;
+    }
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+dt:hover,
+caption:hover,
+p.caption:hover,
+div.code-block-caption:hover {
+    > a.headerlink {
+        visibility: visible;
+    }
+}

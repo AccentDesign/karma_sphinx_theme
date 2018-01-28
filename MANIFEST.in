@@ -1,0 +1,4 @@
+include .txt
+include LICENSE
+recursive-include karma_sphinx_theme *.*
+recursive-exclude karma_sphinx_theme .*.swp

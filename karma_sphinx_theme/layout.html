@@ -1,0 +1,53 @@
+{%- extends "basic/layout.html" %}
+
+{# do not display relbars #}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+
+{# do not display sidebars #}
+{% block sidebar1 %}{% endblock %}
+{% block sidebar2 %}{% endblock %}
+
+{% block content %}
+    <header>
+        <div class="container">
+            <a class="site-title" href="{{ pathto('index') }}">
+                {{ project }}
+            </a>
+            <div class="site-description"></div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                {% include "searchbox.html" %}
+                <div class="toctree">
+                    {% block menu %}
+                        {% set global_toc = toctree(
+                            maxdepth=theme_navigation_depth|int,
+                            collapse=theme_collapse_navigation|tobool,
+                            includehidden=theme_includehidden|tobool,
+                            titles_only=theme_titles_only|tobool
+                        ) %}
+                        {% if global_toc %}
+                            {{ global_toc }}
+                        {% else %}
+                            <div class="local-toc">{{ toc }}</div>
+                        {% endif %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="col-12 col-lg-9">
+                <div class="main">
+                    {% block document %}
+                        {% block body %} {% endblock %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<div class="container">
+    {% block footer %}{% endblock %}
+</div>

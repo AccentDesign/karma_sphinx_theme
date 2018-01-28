@@ -1,0 +1,32 @@
+/* toctree
+ *
+ */
+
+.toctree {
+
+    .caption {
+        font-weight: bold;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        line-height: 1.8;
+    }
+
+    > ul > li:not(.current) > ul {
+        display: none;
+    }
+
+    a {
+        color: rgba(0, 0, 0, .54);
+
+        &.current,
+        &:hover {
+            color: rgba(0, 0, 0, .87);
+        }
+    }
+
+}

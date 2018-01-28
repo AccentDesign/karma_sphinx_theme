@@ -1,0 +1,44 @@
+/* header
+ *
+ */
+
+header {
+  background: darken(color(primary), 32%);
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-title {
+    color: color(white);
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .site-description {
+    color: color(whitesmoke);
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+/* mobile header */
+
+@include media-breakpoint-up(lg) {
+  header {
+    padding: 3rem 0;
+
+    .container {
+      flex-direction: row;
+    }
+
+    .site-title {
+      margin-right: auto;
+    }
+  }
+}
+

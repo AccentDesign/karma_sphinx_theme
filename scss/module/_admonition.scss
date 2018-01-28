@@ -1,0 +1,65 @@
+/* admonition
+ * note: we are just extending the alerts
+ */
+
+.admonition {
+  @extend .alert;
+
+  .admonition-title {
+    font-weight: bold;
+    margin-bottom: .5rem;
+  }
+  .admonition-title:before {
+    font-family: "fontello";
+    padding-right: 1rem;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  &.attention,
+  &.caution,
+  &.warning {
+    @extend .alert-orange;
+
+    .admonition-title:before {
+      content: "\e804";
+    }
+  }
+
+  &.danger,
+  &.error {
+    @extend .alert-red;
+
+    .admonition-title:before {
+      content: "\e810";
+    }
+  }
+
+  &.important {
+    @extend .alert-green;
+
+    .admonition-title:before {
+      content: "\e810";
+    }
+  }
+
+  &.hint,
+  &.tip {
+    @extend .alert-green;
+
+    .admonition-title:before {
+      content: "\f0eb";
+    }
+  }
+
+  &.note {
+    @extend .alert-blue;
+
+    .admonition-title:before {
+      content: "\e801";
+    }
+  }
+
+}
