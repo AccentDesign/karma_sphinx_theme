@@ -8,8 +8,15 @@ header {
 
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+  }
+
+  .site-nav-toggle {
+    color: color(whitesmoke);
+    font-size: 3rem;
+    margin-right: 1rem;
+    cursor: pointer;
   }
 
   .site-title {
@@ -18,26 +25,15 @@ header {
     font-weight: 400;
   }
 
-  .site-description {
-    color: color(whitesmoke);
-    font-weight: 300;
-    font-style: italic;
-  }
 }
 
-/* mobile header */
-
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-down(sm) {
   header {
-    padding: 3rem 0;
-
-    .container {
-      flex-direction: row;
-    }
+    padding: .5rem 0;
 
     .site-title {
-      margin-right: auto;
+      font-size: 1.5rem;
     }
+
   }
 }
-

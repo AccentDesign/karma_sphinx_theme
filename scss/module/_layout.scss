@@ -3,7 +3,7 @@
  */
 
 
- // main content
+ // main body holder
 
 .main-outer {
     background: color(whitesmoke);
@@ -11,7 +11,33 @@
     padding-bottom: 10rem;
 }
 
-.main {
+
+// make sidebar responsive on mobile
+
+@include media-breakpoint-down(md) {
+    .main-outer {
+        position: relative;
+    }
+
+    .sidebar {
+        @include position(0,0,0,0);
+        background: darken(color(whitesmoke), 5%);
+        transform: translateX(-100%);
+        transition: transform $animation-speed-fast linear;
+        z-index: zindex('sidebar');
+        padding-top: 3rem;
+    }
+
+    .sidebar.in {
+        transform: translateX(0);
+    }
+
+}
+
+
+// main document content
+
+.document {
 
     > .section > h1 {
         margin-bottom: 5rem;

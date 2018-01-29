@@ -41,6 +41,12 @@
       "css": "edit",
       "code": 59393,
       "src": "fontawesome"
+    },
+    {
+      "uid": "559647a6f430b3aeadbecd67194451dd",
+      "css": "menu",
+      "code": 61641,
+      "src": "fontawesome"
     }
   ]
 }

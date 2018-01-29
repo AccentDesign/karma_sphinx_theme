@@ -83,10 +83,10 @@
 {%- block header %}
     <header>
         <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
             <a class="site-title" href="{{ pathto('index') }}">
                 {{ project }}
             </a>
-            <div class="site-description"></div>
         </div>
     </header>
 {% endblock %}
@@ -95,7 +95,7 @@
     <div class="main-outer">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-lg-3 sidebar">
                     {% include "searchbox.html" %}
                     <div class="toctree">
                         {% block menu %}
@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-9">
-                    <div class="main">
+                    <div class="document">
                         {% block document %}
                             {% block body %} {% endblock %}
                         {% endblock %}
@@ -141,7 +141,11 @@
   {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
   {%- endfor %}
-
+    <script type="text/javascript">
+        $(document).on('click', '.site-nav-toggle, .sidebar a', function() {
+            $('.sidebar').toggleClass('in');
+        });
+    </script>
   {% endif %}
 
   {%- block footer %}

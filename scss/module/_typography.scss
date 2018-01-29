@@ -2,7 +2,9 @@
  *
  */
 
- .main .highlighted {
+// highlight words from search
+
+.document .highlighted {
     background: lighten(color(yellow), 35%);
     display: inline-block;
     font-weight: bold;

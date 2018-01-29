@@ -15,7 +15,7 @@ header,
 nav,
 section{
   display:block; }
-h1, #search-results h2, #search-results .main .section .toctree-wrapper .caption, .main .section .toctree-wrapper #search-results .caption{
+h1, #search-results h2, #search-results .document .section .toctree-wrapper .caption, .document .section .toctree-wrapper #search-results .caption{
   font-size:2em;
   margin:0.67em 0; }
 figcaption,
@@ -1410,19 +1410,19 @@ td{
 .table-hover tbody tr:hover{
   background-color:whitesmoke; }
 
-h1, #search-results h2, #search-results .main .section .toctree-wrapper .caption, .main .section .toctree-wrapper #search-results .caption, .h1, h2, .main .section .toctree-wrapper .caption, .h2, h3, #search-results ul.search > li > a, .h3, h4, .h4, h5, .h5, h6, .h6{
+h1, #search-results h2, #search-results .document .section .toctree-wrapper .caption, .document .section .toctree-wrapper #search-results .caption, .h1, h2, .document .section .toctree-wrapper .caption, .h2, h3, #search-results ul.search > li > a, .h3, h4, .h4, h5, .h5, h6, .h6{
   font-family:"Lato", sans-serif; }
-  h1 small, #search-results h2 small, #search-results .main .section .toctree-wrapper .caption small, .main .section .toctree-wrapper #search-results .caption small, .h1 small, h2 small, .main .section .toctree-wrapper .caption small, .h2 small, h3 small, #search-results ul.search > li > a small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small{
+  h1 small, #search-results h2 small, #search-results .document .section .toctree-wrapper .caption small, .document .section .toctree-wrapper #search-results .caption small, .h1 small, h2 small, .document .section .toctree-wrapper .caption small, .h2 small, h3 small, #search-results ul.search > li > a small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small{
     font-size:65%;
     line-height:1; }
 
-h1, #search-results h2, #search-results .main .section .toctree-wrapper .caption, .main .section .toctree-wrapper #search-results .caption, .h1{
+h1, #search-results h2, #search-results .document .section .toctree-wrapper .caption, .document .section .toctree-wrapper #search-results .caption, .h1{
   font-weight:700;
   margin:0 0 1.5rem;
   font-size:30px;
   line-height:1.2; }
 
-h2, .main .section .toctree-wrapper .caption, .h2{
+h2, .document .section .toctree-wrapper .caption, .h2{
   font-weight:700;
   margin:0 0 1.5rem;
   font-size:22.5px;
@@ -1559,8 +1559,8 @@ blockquote{
 
 @font-face{
   font-family:'fontello';
-  src:url("../fonts/fontello.eot?56307238");
-  src:url("../fonts/fontello.eot?56307238#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?56307238") format("woff2"), url("../fonts/fontello.woff?56307238") format("woff"), url("../fonts/fontello.ttf?56307238") format("truetype"), url("../fonts/fontello.svg?56307238#fontello") format("svg");
+  src:url("../fonts/fontello.eot?21830982");
+  src:url("../fonts/fontello.eot?21830982#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?21830982") format("woff2"), url("../fonts/fontello.woff?21830982") format("woff"), url("../fonts/fontello.ttf?21830982") format("truetype"), url("../fonts/fontello.svg?21830982#fontello") format("svg");
   font-weight:normal;
   font-style:normal; }
 [class^="icon-"]:before, [class*=" icon-"]:before{
@@ -1590,6 +1590,8 @@ blockquote{
   content:'\e805'; }
 .icon-attention-circled:before{
   content:'\e810'; }
+.icon-menu:before{
+  content:'\f0c9'; }
 .icon-lightbulb:before{
   content:'\f0eb'; }
 header{
@@ -1600,45 +1602,66 @@ header{
     display:-webkit-flex;
     display:-ms-flexbox;
     display:flex;
-    -webkit-box-orient:vertical;
+    -webkit-box-orient:horizontal;
     -webkit-box-direction:normal;
-    -webkit-flex-direction:column;
-    -ms-flex-direction:column;
-    flex-direction:column;
+    -webkit-flex-direction:row;
+    -ms-flex-direction:row;
+    flex-direction:row;
     -webkit-box-align:center;
     -webkit-align-items:center;
     -ms-flex-align:center;
     align-items:center; }
+  header .site-nav-toggle{
+    color:#f5f6f7;
+    font-size:3rem;
+    margin-right:1rem;
+    cursor:pointer; }
   header .site-title{
     color:white;
     font-size:2rem;
     font-weight:400; }
-  header .site-description{
-    color:#f5f6f7;
-    font-weight:300;
-    font-style:italic; }
-@media (min-width: 992px){
+
+@media (max-width: 767px){
   header{
-    padding:3rem 0; }
-    header .container{
-      -webkit-box-orient:horizontal;
-      -webkit-box-direction:normal;
-      -webkit-flex-direction:row;
-      -ms-flex-direction:row;
-      flex-direction:row; }
+    padding:.5rem 0; }
     header .site-title{
-      margin-right:auto; } }
+      font-size:1.5rem; } }
 .main-outer{
   background:#f5f6f7;
   padding-top:3rem;
   padding-bottom:10rem; }
 
-.main > .section > h1, #search-results .main > .section > h2, #search-results .main .section .toctree-wrapper .main > .section > .caption, .main .section .toctree-wrapper #search-results .main > .section > .caption{
+@media (max-width: 991px){
+  .main-outer{
+    position:relative; }
+  .sidebar{
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    position:absolute;
+    background:#e7e9ec;
+    -webkit-transform:translateX(-100%);
+    -o-transform:translateX(-100%);
+    transform:translateX(-100%);
+    -webkit-transition:-webkit-transform 250ms linear;
+    transition:-webkit-transform 250ms linear;
+    -o-transition:-o-transform 250ms linear;
+    transition:transform 250ms linear;
+    transition:transform 250ms linear, -webkit-transform 250ms linear, -o-transform 250ms linear;
+    z-index:100;
+    padding-top:3rem; }
+  .sidebar.in{
+    -webkit-transform:translateX(0);
+    -o-transform:translateX(0);
+    transform:translateX(0); } }
+
+.document > .section > h1, #search-results .document > .section > h2, #search-results .document .section .toctree-wrapper .document > .section > .caption, .document .section .toctree-wrapper #search-results .document > .section > .caption{
   margin-bottom:5rem; }
 
-.main .section{
+.document .section{
   margin-bottom:5rem; }
-  .main .section .toctree-wrapper{
+  .document .section .toctree-wrapper{
     margin-top:3rem; }
 
 .footer{
@@ -1646,7 +1669,7 @@ header{
   padding-top:4rem;
   padding-bottom:4rem; }
 
-#search-results h2, #search-results .main .section .toctree-wrapper .caption, .main .section .toctree-wrapper #search-results .caption{
+#search-results h2, #search-results .document .section .toctree-wrapper .caption, .document .section .toctree-wrapper #search-results .caption{
   margin-bottom:5rem; }
 
 #search-results ul.search{
@@ -1663,8 +1686,8 @@ a.headerlink{
   a.headerlink:hover{
     opacity:.5; }
 
-h1:hover > a.headerlink, #search-results h2:hover > a.headerlink, #search-results .main .section .toctree-wrapper .caption:hover > a.headerlink, .main .section .toctree-wrapper #search-results .caption:hover > a.headerlink,
-h2:hover > a.headerlink, .main .section .toctree-wrapper .caption:hover > a.headerlink,
+h1:hover > a.headerlink, #search-results h2:hover > a.headerlink, #search-results .document .section .toctree-wrapper .caption:hover > a.headerlink, .document .section .toctree-wrapper #search-results .caption:hover > a.headerlink,
+h2:hover > a.headerlink, .document .section .toctree-wrapper .caption:hover > a.headerlink,
 h3:hover > a.headerlink, #search-results ul.search > li > a:hover > a.headerlink,
 h4:hover > a.headerlink,
 h5:hover > a.headerlink,
@@ -1690,7 +1713,7 @@ div.code-block-caption:hover > a.headerlink{
   color:rgba(0, 0, 0, 0.54); }
   .toctree a.current, .toctree a:hover{
     color:rgba(0, 0, 0, 0.87); }
-.main .highlighted{
+.document .highlighted{
   background:#fff5b3;
   display:inline-block;
   font-weight:bold;
