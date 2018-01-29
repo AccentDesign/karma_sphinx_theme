@@ -1,0 +1,107 @@
+/* -- forced --------------------------------------------------- */
+
+// some elements are using a container class so we need to loose the grid style
+.docutils.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* -- main layout ----------------------------------------------------------- */
+
+/* -- relbar ---------------------------------------------------------------- */
+
+/* -- sidebar --------------------------------------------------------------- */
+
+/* -- search page ----------------------------------------------------------- */
+
+/* -- index page ------------------------------------------------------------ */
+
+/* -- general index --------------------------------------------------------- */
+
+/* -- domain module index --------------------------------------------------- */
+
+/* -- general body styles --------------------------------------------------- */
+
+a.headerlink {
+    visibility: hidden;
+    padding-left: .5rem;
+    opacity: .3;
+    &:hover {
+        opacity: .5;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt,
+caption,
+p.caption,
+div.code-block-caption {
+    &:hover {
+        visibility: visible;
+    }
+}
+
+/* -- sidebars -------------------------------------------------------------- */
+
+/* -- topics ---------------------------------------------------------------- */
+
+/* -- admonitions ----------------------------------------------------------- */
+
+/* -- tables ---------------------------------------------------------------- */
+
+table.docutils {
+    @extend .table-headed;
+    @extend .table-bordered;
+    @extend .table-striped;
+}
+
+/* -- figures --------------------------------------------------------------- */
+
+/* -- field list styles ----------------------------------------------------- */
+
+/* -- other body styles ----------------------------------------------------- */
+
+/* -- code displays --------------------------------------------------------- */
+
+div[class^='highlight'] {
+    overflow-x: auto;
+}
+
+td.linenos pre {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    border-right: $code-border-width solid $code-border-color;
+}
+
+td.code {
+    width: 100%;
+}
+
+td.code pre {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+table.highlighttable {
+    font-size: 100%;
+    border: $code-border-width solid $code-border-color;
+    border-radius: $code-border-radius;
+    margin-bottom: $pre-margin-bottom;
+}
+
+table.highlighttable td {
+    padding: 0;
+    vertical-align: top;
+}
+
+/* -- math display ---------------------------------------------------------- */
+
+/* -- printout stylesheet --------------------------------------------------- */
