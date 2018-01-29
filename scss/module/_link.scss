@@ -11,17 +11,17 @@ a.headerlink {
     }
 }
 
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover,
-h5:hover,
-h6:hover,
-dt:hover,
-caption:hover,
-p.caption:hover,
-div.code-block-caption:hover {
-    > a.headerlink {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt,
+caption,
+p.caption,
+div.code-block-caption {
+    &:hover > a.headerlink {
         visibility: visible;
     }
 }

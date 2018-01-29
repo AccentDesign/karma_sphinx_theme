@@ -12,6 +12,8 @@ $heading-font-weight:           700;
 
 // colors
 $colors: (
+    primary:    rgb(3,102, 214),
+    cinder:     rgb(36, 41, 46),
     whitesmoke: rgb(245, 246, 247)
 );
 
@@ -19,6 +21,9 @@ $colors: (
 $body-background:               rgb(239, 241, 242);
 $code-background:               rgb(231, 234, 235);
 $font-color:                    rgb(95, 95, 95);
+
+// misc
+$generic-margin-bottom:         2.5rem; 
 
 // code
 $pre-padding:                   2rem;

@@ -15,7 +15,7 @@ header,
 nav,
 section{
   display:block; }
-h1, #search-results h2, #search-results .document .section .toctree-wrapper .caption, .document .section .toctree-wrapper #search-results .caption{
+h1, #search-results h2, #search-results .document > .section .toctree-wrapper .caption, .document > .section .toctree-wrapper #search-results .caption{
   font-size:2em;
   margin:0.67em 0; }
 figcaption,
@@ -1125,13 +1125,13 @@ body{
   background:#eff1f2; }
 
 a{
-  color:#33c3f0;
+  color:#0366d6;
   text-decoration:none;
   -webkit-transition:color linear 250ms;
   -o-transition:color linear 250ms;
   transition:color linear 250ms; }
   a:hover{
-    color:#10aee0;
+    color:#024ea4;
     text-decoration:none; }
 
 .button{
@@ -1166,12 +1166,12 @@ a{
 
 .button.button-primary{
   color:white;
-  background-color:#33c3f0;
-  border-color:#1bbcee; }
+  background-color:#0366d6;
+  border-color:#035abd; }
   .button.button-primary:hover, .button.button-primary:focus{
     color:white;
-    background-color:#10aee0;
-    border-color:#0f9cc8;
+    background-color:#024ea4;
+    border-color:#02428b;
     outline:0; }
 
 .button.button-secondary{
@@ -1195,7 +1195,7 @@ code{
   border:1px solid #e6e6e6;
   border-radius:0.25rem;
   color:#5f5f5f;
-  font-size:90%;
+  font-size:100%;
   padding:0.2rem 0.5rem;
   word-break:break-word; }
 
@@ -1206,7 +1206,7 @@ pre{
   color:#5f5f5f;
   display:block;
   font-size:90%;
-  margin-bottom:1.5rem;
+  margin-bottom:2.5rem;
   overflow-x:auto;
   padding:2rem;
   white-space:pre; }
@@ -1219,7 +1219,7 @@ pre{
   cursor:not-allowed; }
 
 form{
-  margin-bottom:1.5rem; }
+  margin-bottom:2.5rem; }
 
 input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="week"]{
   -webkit-appearance:none;
@@ -1245,7 +1245,7 @@ input[type="date"], input[type="datetime"], input[type="datetime-local"], input[
   max-width:100%; }
   input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="week"]:focus{
     background:white;
-    border-color:#33c3f0;
+    border-color:#0366d6;
     outline:0; }
 
 input[type="date"], input[type="datetime-local"], input[type="month"], input[type="week"]{
@@ -1278,7 +1278,7 @@ textarea{
   max-width:100%; }
   textarea:focus{
     background:white;
-    border-color:#33c3f0;
+    border-color:#0366d6;
     outline:0; }
 
 select{
@@ -1302,7 +1302,7 @@ select{
   max-width:100%; }
   select:focus{
     background:white;
-    border-color:#33c3f0;
+    border-color:#0366d6;
     outline:0; }
   select:not([multiple]){
     height:calc(3.85rem + 2px); }
@@ -1352,24 +1352,24 @@ hr{
   border-top:1px solid #e6e6e6; }
 
 figure{
-  margin:0 0 1.5rem; }
+  margin:0 0 2.5rem; }
 
 ul{
   padding-left:0;
   list-style:circle inside;
-  margin-bottom:1.5rem; }
+  margin-bottom:2.5rem; }
   ul ul, ul ol{
     margin:0 0 0 2rem; }
 
 ol{
   padding-left:0;
   list-style:decimal inside;
-  margin-bottom:1.5rem; }
+  margin-bottom:2.5rem; }
   ol ol, ol ul{
     margin:0 0 0 2rem; }
 
 dl{
-  margin-bottom:1.5rem; }
+  margin-bottom:2.5rem; }
 
 dt{
   font-weight:bold; }
@@ -1382,7 +1382,7 @@ table{
   border-collapse:collapse;
   border-spacing:0;
   font-size:90%;
-  margin-bottom:1.5rem;
+  margin-bottom:2.5rem;
   max-width:100%;
   width:100%; }
 
@@ -1410,19 +1410,19 @@ td{
 .table-hover tbody tr:hover{
   background-color:whitesmoke; }
 
-h1, #search-results h2, #search-results .document .section .toctree-wrapper .caption, .document .section .toctree-wrapper #search-results .caption, .h1, h2, .document .section .toctree-wrapper .caption, .h2, h3, #search-results ul.search > li > a, .h3, h4, .h4, h5, .h5, h6, .h6{
+h1, #search-results h2, #search-results .document > .section .toctree-wrapper .caption, .document > .section .toctree-wrapper #search-results .caption, .h1, h2, .document > .section .toctree-wrapper .caption, .h2, h3, #search-results ul.search > li > a, .h3, h4, .h4, h5, .h5, h6, .h6{
   font-family:"Lato", sans-serif; }
-  h1 small, #search-results h2 small, #search-results .document .section .toctree-wrapper .caption small, .document .section .toctree-wrapper #search-results .caption small, .h1 small, h2 small, .document .section .toctree-wrapper .caption small, .h2 small, h3 small, #search-results ul.search > li > a small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small{
+  h1 small, #search-results h2 small, #search-results .document > .section .toctree-wrapper .caption small, .document > .section .toctree-wrapper #search-results .caption small, .h1 small, h2 small, .document > .section .toctree-wrapper .caption small, .h2 small, h3 small, #search-results ul.search > li > a small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small{
     font-size:65%;
     line-height:1; }
 
-h1, #search-results h2, #search-results .document .section .toctree-wrapper .caption, .document .section .toctree-wrapper #search-results .caption, .h1{
+h1, #search-results h2, #search-results .document > .section .toctree-wrapper .caption, .document > .section .toctree-wrapper #search-results .caption, .h1{
   font-weight:700;
   margin:0 0 1.5rem;
   font-size:30px;
   line-height:1.2; }
 
-h2, .document .section .toctree-wrapper .caption, .h2{
+h2, .document > .section .toctree-wrapper .caption, .h2{
   font-weight:700;
   margin:0 0 1.5rem;
   font-size:22.5px;
@@ -1453,16 +1453,16 @@ h6, .h6{
   line-height:1.6; }
 
 p{
-  margin-bottom:1.5rem; }
+  margin-bottom:2.5rem; }
 
 blockquote{
-  margin-bottom:1.5rem;
+  margin-bottom:2.5rem;
   padding:1rem 1.5rem;
   border-left:3px solid #e6e6e6; }
 .alert, .admonition{
   position:relative;
   padding:1.5rem 2rem;
-  margin-bottom:1.5rem;
+  margin-bottom:2.5rem;
   border:1px solid #e6e6e6;
   border-radius:0.25rem; }
 .alert-green, .admonition.important, .admonition.hint, .admonition.tip{
@@ -1555,7 +1555,7 @@ blockquote{
   padding:2rem;
   background:white;
   border:1px solid #e6e6e6;
-  margin-bottom:1.5rem; }
+  margin-bottom:2.5rem; }
 
 @font-face{
   font-family:'fontello';
@@ -1595,7 +1595,7 @@ blockquote{
 .icon-lightbulb:before{
   content:'\f0eb'; }
 header{
-  background:#095d77;
+  background:#24292e;
   padding:2rem 0; }
   header .container{
     display:-webkit-box;
@@ -1656,12 +1656,12 @@ header{
     -o-transform:translateX(0);
     transform:translateX(0); } }
 
-.document > .section > h1, #search-results .document > .section > h2, #search-results .document .section .toctree-wrapper .document > .section > .caption, .document .section .toctree-wrapper #search-results .document > .section > .caption{
+.document > .section > h1, #search-results .document > .section > h2, #search-results .document > .section .toctree-wrapper .document > .section > .caption, .document > .section .toctree-wrapper #search-results .document > .section > .caption{
   margin-bottom:5rem; }
 
-.document .section{
+.document > .section{
   margin-bottom:5rem; }
-  .document .section .toctree-wrapper{
+  .document > .section .toctree-wrapper{
     margin-top:3rem; }
 
 .footer{
@@ -1669,7 +1669,7 @@ header{
   padding-top:4rem;
   padding-bottom:4rem; }
 
-#search-results h2, #search-results .document .section .toctree-wrapper .caption, .document .section .toctree-wrapper #search-results .caption{
+#search-results h2, #search-results .document > .section .toctree-wrapper .caption, .document > .section .toctree-wrapper #search-results .caption{
   margin-bottom:5rem; }
 
 #search-results ul.search{
@@ -1686,8 +1686,8 @@ a.headerlink{
   a.headerlink:hover{
     opacity:.5; }
 
-h1:hover > a.headerlink, #search-results h2:hover > a.headerlink, #search-results .document .section .toctree-wrapper .caption:hover > a.headerlink, .document .section .toctree-wrapper #search-results .caption:hover > a.headerlink,
-h2:hover > a.headerlink, .document .section .toctree-wrapper .caption:hover > a.headerlink,
+h1:hover > a.headerlink, #search-results h2:hover > a.headerlink, #search-results .document > .section .toctree-wrapper .caption:hover > a.headerlink, .document > .section .toctree-wrapper #search-results .caption:hover > a.headerlink,
+h2:hover > a.headerlink, .document > .section .toctree-wrapper .caption:hover > a.headerlink,
 h3:hover > a.headerlink, #search-results ul.search > li > a:hover > a.headerlink,
 h4:hover > a.headerlink,
 h5:hover > a.headerlink,
@@ -1748,10 +1748,10 @@ div.code-block-caption:hover > a.headerlink{
   color:#111111; }
 
 .b-primary{
-  background-color:#33c3f0; }
+  background-color:#0366d6; }
 
 .c-primary{
-  color:#33c3f0; }
+  color:#0366d6; }
 
 .b-secondary{
   background-color:#f0f0f0; }
@@ -1884,6 +1884,12 @@ div.code-block-caption:hover > a.headerlink{
 
 .c-pinterest{
   color:#bd081c; }
+
+.b-cinder{
+  background-color:#24292e; }
+
+.c-cinder{
+  color:#24292e; }
 
 .b-whitesmoke{
   background-color:#f5f6f7; }
