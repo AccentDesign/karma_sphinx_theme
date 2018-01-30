@@ -1,4 +1,4 @@
-/* -- forced --------------------------------------------------- */
+/* -- framwork overrides --------------------------------------------------- */
 
 // some elements are using a container class so we need to loose the grid style
 .docutils.container {
@@ -7,23 +7,9 @@
     padding: 0;
 }
 
-/* -- main layout ----------------------------------------------------------- */
-
-/* -- relbar ---------------------------------------------------------------- */
-
-/* -- sidebar --------------------------------------------------------------- */
-
-/* -- search page ----------------------------------------------------------- */
-
-/* -- index page ------------------------------------------------------------ */
-
-/* -- general index --------------------------------------------------------- */
-
-/* -- domain module index --------------------------------------------------- */
-
 /* -- general body styles --------------------------------------------------- */
 
-a.headerlink {
+.headerlink {
     visibility: hidden;
     padding-left: .5rem;
     opacity: .3;
@@ -32,40 +18,171 @@ a.headerlink {
     }
 }
 
+caption,
+.code-block-caption,
+dt,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-dt,
-caption,
-p.caption,
-div.code-block-caption {
-    &:hover {
+.caption,
+.caption-text {
+    &:hover > a.headerlink {
         visibility: visible;
     }
 }
 
+.footnote-reference,
+.citation-reference {
+    vertical-align: super;
+    font-size: 90%;
+}
+
+.rubric {
+    margin-bottom: $generic-margin-bottom / 2;
+    font-weight: bold;
+}
+
+img {
+    min-height: 1px;
+    max-width: 100%;
+    height: auto;
+}
+
+.align-left {
+    float: left;
+    margin-right: $generic-margin-bottom;
+    margin-bottom: $generic-margin-bottom;
+}
+
+.align-center {
+    margin: auto;
+    display: block;
+
+    &.figure {
+        text-align: center;
+    }
+}
+
+.align-right {
+    float: right;
+    margin-left: $generic-margin-bottom;
+    margin-bottom: $generic-margin-bottom;
+}
+
 /* -- sidebars -------------------------------------------------------------- */
 
-/* -- topics ---------------------------------------------------------------- */
+.sidebar {
+    border: 1px solid $border-color;
+    margin: 0 0 $generic-margin-bottom $generic-margin-bottom;
+    padding: $generic-margin-bottom;
+    background-color: color(secondary);
+    width: 40%;
+    float: right;
+}
 
-/* -- admonitions ----------------------------------------------------------- */
+.sidebar-title {
+    background: color(whitesmoke);
+    font-weight: bold;
+    margin: {
+        top: -$generic-margin-bottom;
+        right: -$generic-margin-bottom;
+        bottom: $generic-margin-bottom;
+        left: -$generic-margin-bottom;
+    }
+    padding: .5rem 1rem;
+}
 
 /* -- tables ---------------------------------------------------------------- */
 
-table.docutils {
+table.docutils:not(.footnote):not(.citation) {
     @extend .table-headed;
     @extend .table-bordered;
     @extend .table-striped;
 }
 
+table.docutils.field-list {
+    @extend .table-headed;
+    @extend .table-bordered;
+}
+
+table.docutils.footnote {
+    color: color(grey);
+    width: auto;
+}
+
+table.docutils.footnote td {
+    border: 0;
+    padding-left: 0;
+    padding-right: 2rem;
+    &:not(.label) {
+        width: 100%;
+    }
+}
+
 /* -- figures --------------------------------------------------------------- */
 
-/* -- field list styles ----------------------------------------------------- */
+.figure p.caption {
+    font-style: italic;
+}
 
 /* -- other body styles ----------------------------------------------------- */
+
+ol.arabic {
+    list-style-type: decimal;
+}
+
+ol.loweralpha {
+    list-style-type: lower-alpha;
+}
+
+ol.upperalpha {
+    list-style-type: upper-alpha;
+}
+
+ol.lowerroman {
+    list-style-type: lower-roman;
+}
+
+ol.upperroman {
+    list-style-type: upper-roman;
+}
+
+li p,
+dd p {
+    margin-bottom: $generic-margin-bottom / 2;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.line-block {
+    margin-bottom: $generic-margin-bottom;
+    margin-left: $generic-margin-bottom;
+
+    .line-block {
+        margin-bottom: 0;
+        margin-left: 2rem;
+    }
+}
+
+blockquote {
+    margin-bottom: $generic-margin-bottom;
+    margin-left: $generic-margin-bottom;
+}
+
+.guilabel {
+    border: $border-width solid color(primary);
+    background: lighten(color(primary), 50%);
+    font-size: 80%;
+    font-weight: 700;
+    border-radius: $global-radius;
+    padding: .15rem .5rem;
+    margin: auto .2rem;
+}
 
 /* -- code displays --------------------------------------------------------- */
 
@@ -94,14 +211,81 @@ table.highlighttable {
     font-size: 100%;
     border: $code-border-width solid $code-border-color;
     border-radius: $code-border-radius;
-    margin-bottom: $pre-margin-bottom;
 }
 
 table.highlighttable td {
     padding: 0;
-    vertical-align: top;
 }
 
-/* -- math display ---------------------------------------------------------- */
+tt.literal,
+code.literal {
+    background: color(white);
+    color: color(red);
+}
+
+tt.xref,
+a tt,
+code.xref,
+a code {
+    font-weight: bold;
+    color: color(black);
+}
+
+tt.download,
+code.download {
+    background: inherit;
+    padding: inherit;
+    font-weight: normal;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: inherit;
+    white-space: inherit;
+
+    &::before {
+        font-family: fontello;
+        content: "\e802";
+        padding-right: .5rem;
+    }
+}
+
+/* -- module highlighting --------------------------------------------------- */
+dl:not(.docutils) dt {
+    margin: .6rem 0;
+    font-size: 90%;
+    line-height: normal;
+    background: rgba(color(primary), .1);
+    color: rgba(color(primary), .9);
+    border-top: solid 3px color(primary);
+    padding: .6rem;
+}
+
+dl:not(.docutils) dl dt {
+    border: none;
+    border-left: solid 3px $border-color;
+    background: color(secondary);
+    color: $font-color;
+}
+
+dl:not(.docutils) {
+    tt.descname,
+    tt.descclassname,
+    code.descname,
+    code.descclassname {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        font-size: 100%;
+    }
+
+    tt.descname,
+    code.descname {
+        font-weight: bold;
+    }
+}
+
+dl:not(.docutils).data dt {
+    display: inline-block;
+}
 
 /* -- printout stylesheet --------------------------------------------------- */

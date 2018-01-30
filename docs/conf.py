@@ -1,7 +1,16 @@
+# -*- coding: utf-8 -*-
+import sys
+import os
 from datetime import datetime
 
 
-extensions = []
+sys.path.append(os.path.abspath('.'))
+
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
+]
 templates_path = ['_templates']
 source_suffix = '.rst'
 master_doc = 'index'

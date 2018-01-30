@@ -12,7 +12,7 @@ $heading-font-weight:           700;
 
 // colors
 $colors: (
-    primary:    rgb(3,102, 214),
+    primary:    rgb(0, 116, 217),
     cinder:     rgb(36, 41, 46),
     whitesmoke: rgb(245, 246, 247)
 );
@@ -25,10 +25,27 @@ $font-color:                    rgb(95, 95, 95);
 // misc
 $generic-margin-bottom:         2.5rem; 
 
+$ul-list-padding-left:          2rem;
+$ul-list-style:                 circle outside;
+$ul-list-nested-margin:         0;
+
+$ol-list-padding-left:          1.7rem;
+$ol-list-style:                 decimal outside;
+$ol-list-nested-margin:         0;
+
+$dl-margin-bottom:              $generic-margin-bottom !default;
+$dt-margin:                     0 0 0 0 !default;
+$dd-margin:                     0 0 $generic-margin-bottom $generic-margin-bottom !default;
+
 // code
 $pre-padding:                   2rem;
 
+// blockquote
+$blockquote-padding-x:          0;
+$blockquote-padding-y:          0;
+$blockquote-border-left-width:  0;
+
 // layers
 $z-layers: (
-    'sidebar': 100
+    'site-nav': 100
 );

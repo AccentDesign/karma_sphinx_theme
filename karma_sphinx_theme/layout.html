@@ -95,7 +95,7 @@
     <div class="main-outer">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-3 sidebar">
+                <div class="col-12 col-lg-3 site-nav">
                     {% include "searchbox.html" %}
                     <div class="toctree">
                         {% block menu %}
@@ -141,11 +141,7 @@
   {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
   {%- endfor %}
-    <script type="text/javascript">
-        $(document).on('click', '.site-nav-toggle, .sidebar a', function() {
-            $('.sidebar').toggleClass('in');
-        });
-    </script>
+    <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
   {% endif %}
 
   {%- block footer %}

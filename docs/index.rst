@@ -21,4 +21,9 @@ pertinacia mei, et his quas timeam accusam.
    :caption: Contents
 
    admonitions
+   demo
+   lists
+   structure
+   tables
+   api
    changelog
