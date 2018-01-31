@@ -24,6 +24,8 @@ exclude_patterns = ['_build']
 html_theme = 'karma_sphinx_theme'
 html_theme_options = {}
 
+html_theme_path = [".."]
+
 extensions.append('releases')
 releases_github_path = 'accentdesign/karma_sphinx_theme'
 releases_unstable_prehistory = True

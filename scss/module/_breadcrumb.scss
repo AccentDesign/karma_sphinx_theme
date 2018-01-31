@@ -1,0 +1,37 @@
+/* breadcrumb
+ * 
+ */
+
+ul.breadcrumbs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+
+    li+li:not(.breadcrumbs-aside):before {
+        padding: 0 1rem;
+        content: "•";
+    }
+
+    .breadcrumbs-aside {
+        margin-left: auto;
+    }
+
+    code {
+        padding: 0;
+        border: none;
+        background: none;
+        font-family: $base-font-family;
+        font-size: initial;
+
+        &.literal {
+            color: $font-color;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    ul.breadcrumbs .breadcrumbs-aside {
+        display: none
+    }
+}

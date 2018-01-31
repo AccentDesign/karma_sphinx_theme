@@ -10,7 +10,7 @@ with open('karma_sphinx_theme/_version.py') as fp:
 version = _locals['__version__']
 
 # README into long description
-with codecs.open('README.rst', encoding='utf-8') as f:
+with codecs.open('README.md', encoding='utf-8') as f:
     readme = f.read()
 
 setup(
