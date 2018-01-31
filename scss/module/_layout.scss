@@ -12,7 +12,7 @@
 }
 
 
-// site-nav {
+// site-nav
 
 .site-nav {
     code.literal,
@@ -34,7 +34,7 @@
 
     .site-nav {
         @include position(0,0,0,0);
-        background: darken(color(whitesmoke), 5%);
+        background: color(whitesmoke);
         transform: translateX(-100%);
         transition: transform $animation-speed-fast linear;
         z-index: zindex('site-nav');
@@ -71,15 +71,6 @@
             @extend h2;
         }
     }
-}
-
-
-// footer
-
-.footer {
-    color: darken(color(whitesmoke), 20%);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
 }
 
 

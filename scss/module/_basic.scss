@@ -36,8 +36,9 @@ h6,
 
 .footnote-reference,
 .citation-reference {
-    vertical-align: super;
     font-size: 90%;
+    position: relative;
+    top: -.6rem;
 }
 
 .rubric {
@@ -117,10 +118,23 @@ table.docutils.footnote td {
     border: 0;
     padding-left: 0;
     padding-right: 2rem;
+
+    /* make the column with the note fill all the width */
     &:not(.label) {
         width: 100%;
     }
+
+    /* where an em and p are together inline them so they are side by side */
+    em+p {
+        display: inline-block;
+    }
+
+    /* remove margin from last p */
+    p.last {
+        margin-bottom: 0;
+    }
 }
+
 
 /* -- figures --------------------------------------------------------------- */
 
@@ -186,8 +200,14 @@ blockquote {
 
 /* -- code displays --------------------------------------------------------- */
 
-div[class^='highlight'] {
+div[class^='highlight-'] {
+    background: $code-background;
+    margin-bottom: $generic-margin-bottom;
     overflow-x: auto;
+
+    pre {
+        margin-bottom: 0;
+    }
 }
 
 td.linenos pre {
@@ -211,6 +231,7 @@ table.highlighttable {
     font-size: 100%;
     border: $code-border-width solid $code-border-color;
     border-radius: $code-border-radius;
+    margin-bottom: 0;
 }
 
 table.highlighttable td {

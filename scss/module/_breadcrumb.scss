@@ -2,11 +2,16 @@
  * 
  */
 
-ul.breadcrumbs {
+.breadcrumbs-outer {
+    background: color(solitude);
+    border: solid 1px $border-color;
+}
+
+.breadcrumbs {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+    margin: 0;
+    padding: 1rem 0;
 
     li+li:not(.breadcrumbs-aside):before {
         padding: 0 1rem;

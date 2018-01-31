@@ -10,6 +10,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'releases'
 ]
 templates_path = ['_templates']
 source_suffix = '.rst'
@@ -22,10 +23,13 @@ copyright = u'%d Accent Design Group LTD' % year
 exclude_patterns = ['_build']
 
 html_theme = 'karma_sphinx_theme'
-html_theme_options = {}
+html_theme_options = {
+    # 'navigation_depth': 3,
+    # 'titles_only': False,
+    # 'includehidden': False,
+}
 
 html_theme_path = [".."]
 
-extensions.append('releases')
 releases_github_path = 'accentdesign/karma_sphinx_theme'
 releases_unstable_prehistory = True

@@ -91,8 +91,10 @@
     </header>
 {% endblock %}
 
-<div class="container">
-    {% include "breadcrumbs.html" %}
+<div class="breadcrumbs-outer">
+    <div class="container">
+        {% include "breadcrumbs.html" %}
+    </div>
 </div>
 
 {%- block content %}
@@ -105,7 +107,7 @@
                         {% block menu %}
                             {% set global_toc = toctree(
                                 maxdepth=theme_navigation_depth|int,
-                                collapse=theme_collapse_navigation|tobool,
+                                collapse=False,
                                 includehidden=theme_includehidden|tobool,
                                 titles_only=theme_titles_only|tobool
                             ) %}
