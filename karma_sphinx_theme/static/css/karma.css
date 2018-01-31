@@ -1432,25 +1432,25 @@ h2, .document > .section .toctree-wrapper .caption, .h2{
 h3, #search-results ul.search > li > a, .h3{
   font-weight:700;
   margin:0 0 1.5rem;
-  font-size:17.55px;
+  font-size:21px;
   line-height:1.3; }
 
 h4, .h4{
   font-weight:700;
   margin:0 0 1.5rem;
-  font-size:15px;
+  font-size:19.5px;
   line-height:1.35; }
 
 h5, .h5{
   font-weight:700;
   margin:0 0 1.5rem;
-  font-size:12.45px;
+  font-size:18px;
   line-height:1.5; }
 
 h6, .h6{
   font-weight:700;
   margin:0 0 1.5rem;
-  font-size:10.05px;
+  font-size:16.5px;
   line-height:1.6; }
 
 p{
@@ -1661,7 +1661,23 @@ header{
 
 @media (max-width: 991px){
   header{
-    padding:0; }
+    padding:0;
+    position:fixed;
+    top:0;
+    -webkit-transition:-webkit-transform 250ms ease-in-out;
+    transition:-webkit-transform 250ms ease-in-out;
+    -o-transition:-o-transform 250ms ease-in-out;
+    transition:transform 250ms ease-in-out;
+    transition:transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out, -o-transform 250ms ease-in-out;
+    width:100%;
+    z-index:101;
+    -webkit-transform:translateY(0);
+    -o-transform:translateY(0);
+    transform:translateY(0); }
+    header.up{
+      -webkit-transform:translateY(-100%);
+      -o-transform:translateY(-100%);
+      transform:translateY(-100%); }
     header .site-title{
       font-size:1.5rem; } }
 .main-outer{
@@ -1678,6 +1694,8 @@ header{
   padding-right:0; }
 
 @media (max-width: 991px){
+  body{
+    padding-top:6.6rem; }
   .main-outer{
     position:relative; }
   .site-nav{
@@ -1685,8 +1703,12 @@ header{
     right:0;
     bottom:0;
     left:0;
-    position:absolute;
+    position:fixed;
     background:#f5f6f7;
+    height:100vh;
+    overflow-y:scroll;
+    padding-top:10rem;
+    padding-bottom:5rem;
     -webkit-transform:translateX(-100%);
     -o-transform:translateX(-100%);
     transform:translateX(-100%);
@@ -1695,13 +1717,14 @@ header{
     -o-transition:-o-transform 250ms linear;
     transition:transform 250ms linear;
     transition:transform 250ms linear, -webkit-transform 250ms linear, -o-transform 250ms linear;
-    z-index:100;
-    padding-top:3rem; }
-  .site-nav.in{
+    z-index:100; }
+  body.nav-in{
+    overflow:hidden; }
+  body.nav-in .site-nav{
     -webkit-transform:translateX(0);
     -o-transform:translateX(0);
     transform:translateX(0); }
-    .site-nav.in .icon-input{
+    body.nav-in .site-nav .icon-input{
       width:100%; } }
 
 .document > .section > h1, #search-results .document > .section > h2, #search-results .document > .section .toctree-wrapper .document > .section > .caption, .document > .section .toctree-wrapper #search-results .document > .section > .caption{

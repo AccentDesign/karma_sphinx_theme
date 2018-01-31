@@ -31,10 +31,21 @@ header {
 @include media-breakpoint-down(md) {
   header {
     padding: 0;
+    position: fixed;
+    top: 0;
+    transition: transform $animation-speed-fast ease-in-out;
+    width: 100%;
+    z-index: zindex('header');
+    transform: translateY(0);
+
+    &.up {
+        transform: translateY(-100%);
+    }
 
     .site-title {
       font-size: 1.5rem;
     }
 
   }
+
 }

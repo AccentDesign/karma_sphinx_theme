@@ -28,20 +28,30 @@
 // make site-nav responsive on mobile
 
 @include media-breakpoint-down(md) {
+    body {
+        padding-top: 6.6rem;
+    }
     .main-outer {
         position: relative;
     }
 
     .site-nav {
-        @include position(0,0,0,0);
+        @include position(0,0,0,0, fixed);
         background: color(whitesmoke);
+        height: 100vh;
+        overflow-y: scroll;
+        padding-top: 10rem;
+        padding-bottom: 5rem;
         transform: translateX(-100%);
         transition: transform $animation-speed-fast linear;
         z-index: zindex('site-nav');
-        padding-top: 3rem;
     }
 
-    .site-nav.in {
+    body.nav-in {
+        overflow: hidden;
+    }
+
+    body.nav-in .site-nav {
         transform: translateX(0);
 
         .icon-input {
