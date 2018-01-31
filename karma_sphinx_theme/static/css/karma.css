@@ -1714,7 +1714,8 @@ header{
 
 #search-results ul.search{
   list-style-type:none;
-  margin-top:3rem; }
+  margin-top:3rem;
+  padding:0; }
   #search-results ul.search > li:not(:last-child){
     padding-bottom:3rem;
     border-bottom:solid 1px #e6e6e6;
