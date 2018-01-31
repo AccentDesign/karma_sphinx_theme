@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Karma Sphinx Theme
-==================
+Welcome
+=======
 
 Lorem ipsum dolor sit amet, tale vide mel te. Ei qui stet nostrud democritum.
 Ne quo viris appareat prodesset, mea ex nisl offendit, te his duis fierent recusabo.

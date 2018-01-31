@@ -14,9 +14,9 @@ header {
 
   .site-nav-toggle {
     color: color(whitesmoke);
-    font-size: 3rem;
-    margin-right: 1rem;
-    margin-left: -.6rem;
+    font-size: 3.5rem;
+    margin-left: -1rem;
+    padding: .5rem 1rem .5rem 0;
     cursor: pointer;
   }
 
@@ -28,9 +28,9 @@ header {
 
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   header {
-    padding: .5rem 0;
+    padding: 0;
 
     .site-title {
       font-size: 1.5rem;

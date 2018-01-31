@@ -1642,18 +1642,18 @@ header{
     align-items:center; }
   header .site-nav-toggle{
     color:#f5f6f7;
-    font-size:3rem;
-    margin-right:1rem;
-    margin-left:-.6rem;
+    font-size:3.5rem;
+    margin-left:-1rem;
+    padding:.5rem 1rem .5rem 0;
     cursor:pointer; }
   header .site-title{
     color:white;
     font-size:2rem;
     font-weight:400; }
 
-@media (max-width: 767px){
+@media (max-width: 991px){
   header{
-    padding:.5rem 0; }
+    padding:0; }
     header .site-title{
       font-size:1.5rem; } }
 .main-outer{
@@ -1692,7 +1692,9 @@ header{
   .site-nav.in{
     -webkit-transform:translateX(0);
     -o-transform:translateX(0);
-    transform:translateX(0); } }
+    transform:translateX(0); }
+    .site-nav.in .icon-input{
+      width:100%; } }
 
 .document > .section > h1, #search-results .document > .section > h2, #search-results .document > .section .toctree-wrapper .document > .section > .caption, .document > .section .toctree-wrapper #search-results .document > .section > .caption{
   margin-bottom:5rem; }
