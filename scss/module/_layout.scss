@@ -12,56 +12,6 @@
 }
 
 
-// site-nav
-
-.site-nav {
-    code.literal,
-    tt.literal {
-        border: none;
-        background: inherit;
-        color: inherit;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-// make site-nav responsive on mobile
-
-@include media-breakpoint-down(md) {
-    body {
-        padding-top: 6.6rem;
-    }
-    .main-outer {
-        position: relative;
-    }
-
-    .site-nav {
-        @include position(0,0,0,0, fixed);
-        background: color(whitesmoke);
-        height: 100vh;
-        overflow-y: scroll;
-        padding-top: 10rem;
-        padding-bottom: 5rem;
-        transform: translateX(-100%);
-        transition: transform $animation-speed-fast linear;
-        z-index: zindex('site-nav');
-    }
-
-    body.nav-in {
-        overflow: hidden;
-    }
-
-    body.nav-in .site-nav {
-        transform: translateX(0);
-
-        .icon-input {
-            width: 100%;
-        }
-    }
-
-}
-
-
 // main document content
 
 .document {
@@ -81,33 +31,4 @@
             @extend h2;
         }
     }
-}
-
-
-// search
-
-#search-results {
-
-    h2 {
-        @extend h1; // changing template markup to h1 is not doing anything, 
-                    // oddly searchtools.js is replacing it
-        margin-bottom: 5rem;
-    }
-
-    ul.search {
-        list-style-type: none;
-        margin-top: 3rem;
-        padding: 0;
-
-        > li:not(:last-child) {
-            padding-bottom: 3rem;
-            border-bottom: solid $border-width $border-color;
-            margin-bottom: 3rem;
-        }
-    
-        > li > a {
-            @extend h3;
-        }
-    }
-
 }

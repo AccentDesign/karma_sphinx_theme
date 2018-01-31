@@ -3,49 +3,45 @@
  */
 
 header {
-  background: color(cinder);
-  padding: 2rem 0;
+    background: color(cinder);
+    padding: 2rem 0;
 
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
-  .site-nav-toggle {
-    color: color(whitesmoke);
-    font-size: 3.5rem;
-    margin-left: -1rem;
-    padding: .5rem 1rem .5rem 0;
-    cursor: pointer;
-  }
-
-  .site-title {
-    color: color(white);
-    font-size: 2rem;
-    font-weight: 400;
-  }
-
-}
-
-@include media-breakpoint-down(md) {
-  header {
-    padding: 0;
-    position: fixed;
-    top: 0;
-    transition: transform $animation-speed-fast ease-in-out;
-    width: 100%;
-    z-index: zindex('header');
-    transform: translateY(0);
-
-    &.up {
-        transform: translateY(-100%);
+    .site-nav-toggle {
+        color: color(whitesmoke);
+        font-size: 3.5rem;
+        margin-left: -1rem;
+        padding: .5rem 1rem .5rem 0;
+        cursor: pointer;
     }
 
     .site-title {
-      font-size: 1.5rem;
+        color: color(white);
+        font-size: 2rem;
+        font-weight: 400;
     }
+}
 
-  }
+@include media-breakpoint-down(md) {
+    header {
+        @include position($top: 0, $position: fixed);
+        padding: 0;
+        transform: translateY(0);
+        transition: transform $animation-speed-fast ease-in-out;
+        width: 100%;
+        z-index: zindex('header');
 
+        &.up {
+            transform: translateY(-100%);
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+        }
+    }
 }

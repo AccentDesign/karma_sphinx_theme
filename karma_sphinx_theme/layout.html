@@ -103,7 +103,7 @@
             <div class="row">
                 <div class="col-12 col-lg-3 site-nav">
                     {% include "searchbox.html" %}
-                    <div class="toctree">
+                    <div class="site-nav-tree">
                         {% block menu %}
                             {% set global_toc = toctree(
                                 maxdepth=theme_navigation_depth|int,

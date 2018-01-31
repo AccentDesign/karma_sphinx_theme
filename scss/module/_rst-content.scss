@@ -7,6 +7,34 @@
     padding: 0;
 }
 
+/* -- search results ------------------------------------------------------- */
+
+#search-results {
+
+    h2 {
+        @extend h1; // changing template markup to h1 is not doing anything, 
+                    // oddly searchtools.js is replacing it
+        margin-bottom: 5rem;
+    }
+
+    ul.search {
+        list-style-type: none;
+        margin-top: 3rem;
+        padding: 0;
+
+        > li:not(:last-child) {
+            padding-bottom: 3rem;
+            border-bottom: solid $border-width $border-color;
+            margin-bottom: 3rem;
+        }
+    
+        > li > a {
+            @extend h3;
+        }
+    }
+
+}
+
 /* -- general body styles --------------------------------------------------- */
 
 .headerlink {

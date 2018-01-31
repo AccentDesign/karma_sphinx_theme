@@ -1,0 +1,84 @@
+/* site nav
+ *
+ */
+
+.site-nav {
+    code.literal,
+    tt.literal {
+        border: none;
+        background: inherit;
+        color: inherit;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.site-nav-tree {
+
+    .caption {
+        font-weight: bold;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    ul ul {
+        margin-left: 1.5rem;
+    }
+    
+    li {
+        line-height: 1.8;
+    }
+
+    > ul > li:not(.current) > ul {
+        display: none;
+    }
+
+    a {
+        color: rgba(0, 0, 0, .54);
+
+        &.current,
+        &:hover {
+            color: rgba(0, 0, 0, .87);
+        }
+    }
+
+}
+
+// make site-nav responsive on mobile
+
+@include media-breakpoint-down(md) {
+    body {
+        padding-top: 6.6rem;
+    }
+    .main-outer {
+        position: relative;
+    }
+
+    .site-nav {
+        @include position(0,0,0,0, fixed);
+        background: color(whitesmoke);
+        height: 100vh;
+        overflow-y: scroll;
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+        transform: translateX(-100%);
+        transition: transform $animation-speed-fast linear;
+        z-index: zindex('site-nav');
+    }
+
+    body.nav-in {
+        overflow: hidden;
+    }
+
+    body.nav-in .site-nav {
+        transform: translateX(0);
+
+        .icon-input {
+            width: 100%;
+        }
+    }
+
+}
