@@ -42,7 +42,7 @@ var config = {
 };
 
 gulp.task('scss', function() {
-    return gulp.src(config.scssDir + '/karma.scss')
+    return gulp.src(config.scssDir + '/theme.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass(config.sass))
     .pipe($.postcss([
@@ -72,7 +72,7 @@ gulp.task('fontello_dist_fonts', function () {
 });
 
 gulp.task('min', function () {
-  return gulp.src(config.publicDir + '/css/karma.css')
+  return gulp.src(config.publicDir + '/css/theme.css')
     .pipe($.cssmin(config.cssmin))
     .pipe($.rename({suffix: '.min'}))
     .pipe(gulp.dest(config.publicDir + '/css'))
