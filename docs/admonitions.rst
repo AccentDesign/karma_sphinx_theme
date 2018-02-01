@@ -3,6 +3,10 @@ Admonitions
 
 All types of admonitions have been styled.
 
+.. admonition:: I'm a basic admonition
+
+   With some text
+
 .. note:: I'm an admonition.
 .. important:: I'm an admonition.
 .. hint:: I'm an admonition.
