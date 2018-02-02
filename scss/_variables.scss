@@ -21,10 +21,9 @@ $h6-font-size:                  1.1 * $base-font-size;
 
 // colors
 $colors: (
-    primary:    rgb(0, 116, 217),
-    cinder:     rgb(36, 41, 46),
-    whitesmoke: rgb(245, 246, 247),
-    solitude:   rgb(250, 251, 252)
+    cinder:         rgb(36, 41, 46),
+    whitesmoke:     rgb(245, 246, 247),
+    solitude:       rgb(250, 251, 252)
 );
 
 // defined colors
@@ -35,6 +34,7 @@ $font-color:                    rgb(95, 95, 95);
 // misc
 $generic-margin-bottom:         2.5rem; 
 
+// lists
 $ul-list-padding-left:          2rem;
 $ul-list-style:                 circle outside;
 $ul-list-nested-margin:         0;
@@ -52,11 +52,6 @@ $table-headed-color:            rgb(231, 233, 236) !default;
 
 // code
 $pre-padding:                   2rem;
-
-// blockquote
-$blockquote-padding-x:          0;
-$blockquote-padding-y:          0;
-$blockquote-border-left-width:  0;
 
 // layers
 $z-layers: (

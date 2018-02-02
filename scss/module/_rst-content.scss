@@ -42,7 +42,7 @@
     padding-left: .5rem;
     opacity: .3;
     &:hover {
-        opacity: .5;
+        opacity: .6;
     }
 }
 
@@ -211,14 +211,13 @@ dd p {
     }
 }
 
-blockquote {
-    margin-bottom: $generic-margin-bottom;
-    margin-left: $generic-margin-bottom;
-}
+blockquote .attribution {
+    margin-bottom: 0;
+}  
 
 .guilabel {
     border: $border-width solid color(primary);
-    background: lighten(color(primary), 50%);
+    background: lighten(color(primary), 30%);
     font-size: 80%;
     font-weight: 700;
     border-radius: $global-radius;
