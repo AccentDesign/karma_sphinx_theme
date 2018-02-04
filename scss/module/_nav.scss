@@ -63,7 +63,6 @@
         height: 100vh;
         overflow-y: scroll;
         padding-top: 10rem;
-        padding-bottom: 5rem;
         transform: translateX(-100%);
         transition: transform $animation-speed-fast linear;
         z-index: zindex('site-nav');
