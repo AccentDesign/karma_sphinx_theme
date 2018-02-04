@@ -31,4 +31,8 @@
             @extend h2;
         }
     }
+
+    > .section > .section {
+        margin-bottom: 5rem;
+    }
 }
