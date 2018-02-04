@@ -6,13 +6,18 @@
 @import "node_modules/karma-css/scss/import";
 
 /* add your custom modules here */
+
+/* components */
 @import "component-variables";
 @import "node_modules/karma-css-components/scss/components/alert";
 @import "node_modules/karma-css-components/scss/components/icon-input";
 
+/* fontello */
+@import "fontello/css/fontello";
+
+/* modules */
 @import "module/admonition";
 @import "module/breadcrumb";
-@import "module/fontello";
 @import "module/footer";
 @import "module/header";
 @import "module/layout";
