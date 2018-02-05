@@ -1715,13 +1715,12 @@ blockquote{
 
 .icon-input [class*="icon-"]:before{
   position:absolute;
-  top:auto;
+  top:50%;
   right:auto;
   bottom:auto;
   left:0;
   margin:-.5em 0;
   text-align:center;
-  top:50%;
   width:100%;
 }
 @font-face{
