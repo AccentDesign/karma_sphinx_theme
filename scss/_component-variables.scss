@@ -8,10 +8,10 @@ $alert-padding:                 1.5rem 2rem !default;
 
 $alerts: (
     // name                     background                      font-color
-    green:                      lighten(color(green), 35%)      $font-color,
-    red:                        lighten(color(red), 30%)        $font-color,
-    blue:                       lighten(color(aqua), 15%)       $font-color,
-    orange:                     lighten(color(orange), 35%)     $font-color
+    green:                      lighten(color("green"), 35%)      $font-color,
+    red:                        lighten(color("red"), 30%)        $font-color,
+    blue:                       lighten(color("aqua"), 15%)       $font-color,
+    orange:                     lighten(color("orange"), 35%)     $font-color
 );
 
 // Icon Input

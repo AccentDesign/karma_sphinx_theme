@@ -59,7 +59,7 @@
 
     .site-nav {
         @include position(0,0,0,0, fixed);
-        background: color(whitesmoke);
+        background: color("whitesmoke");
         height: 100vh;
         overflow-y: scroll;
         padding-top: 10rem;

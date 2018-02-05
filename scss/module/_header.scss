@@ -3,7 +3,7 @@
  */
 
 header {
-    background: color(cinder);
+    background: color("cinder");
     padding: 2rem 0;
 
     .container {
@@ -13,7 +13,7 @@ header {
     }
 
     .site-nav-toggle {
-        color: color(whitesmoke);
+        color: color("whitesmoke");
         font-size: 3.5rem;
         margin-left: -1rem;
         padding: .5rem 1rem .5rem 0;
@@ -21,7 +21,7 @@ header {
     }
 
     .site-title {
-        color: color(white);
+        color: color("white");
         font-size: 2rem;
         font-weight: 400;
     }

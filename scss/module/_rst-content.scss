@@ -107,13 +107,13 @@ img {
     border: 1px solid $border-color;
     margin: 0 0 $generic-margin-bottom $generic-margin-bottom;
     padding: $generic-margin-bottom;
-    background-color: color(secondary);
+    background-color: color("secondary");
     width: 40%;
     float: right;
 }
 
 .sidebar-title {
-    background: color(whitesmoke);
+    background: color("whitesmoke");
     font-weight: bold;
     margin: {
         top: -$generic-margin-bottom;
@@ -138,7 +138,7 @@ table.docutils.field-list {
 }
 
 table.docutils.footnote {
-    color: color(grey);
+    color: color("grey");
     width: auto;
 }
 
@@ -216,8 +216,8 @@ blockquote .attribution {
 }  
 
 .guilabel {
-    border: $border-width solid color(primary);
-    background: lighten(color(primary), 30%);
+    border: $border-width solid color("primary");
+    background: color-lighten("primary", 30%);
     font-size: 80%;
     font-weight: 700;
     border-radius: $global-radius;
@@ -267,15 +267,15 @@ table.highlighttable td {
 
 tt.literal,
 code.literal {
-    background: color(white);
-    color: color(red);
+    background: color("white");
+    color: color("red");
 }
 
 tt.xref,
 a tt,
 code.xref,
 a code {
-    color: color(black);
+    color: color("black");
 }
 
 tt.download,
@@ -301,16 +301,16 @@ dl:not(.docutils) dt {
     margin: .6rem 0;
     font-size: 90%;
     line-height: normal;
-    background: rgba(color(primary), .1);
-    color: rgba(color(primary), .9);
-    border-top: solid 3px color(primary);
+    background: color-a("primary", .1);
+    color: color-a("primary", .9);
+    border-top: solid 3px color("primary");
     padding: .6rem;
 }
 
 dl:not(.docutils) dl dt {
     border: none;
     border-left: solid 3px $border-color;
-    background: color(secondary);
+    background: color("secondary");
     color: $font-color;
 }
 
