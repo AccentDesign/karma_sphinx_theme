@@ -4,21 +4,36 @@ $(document).ready(function(){
     var $body = $('body');
     var $window = $(window);
 
-    // Hide the header on scroll down
-    var scrollMinFromTop = 200;
-    var scrollPrev = 0;
+    // scrolling variables
+	var scrolling = false,
+    previousTop = 0,
+    currentTop = 0,
+    scrollDelta = 10,
+    scrollOffset = 150;
 
+    // scroll event to show / hide header
     $window.on('scroll', function(){
-        var scrollTop = $window.scrollTop();
-        var isNavOpen = $body.hasClass('nav-in');
-
-        if (!isNavOpen && scrollTop > scrollPrev && scrollTop > scrollMinFromTop) {
-            $header.addClass('up');
-        } else {
-            $header.removeClass('up');
-        }
-        scrollPrev = scrollTop;
+		if( !scrolling ) {
+			scrolling = true;
+			(!window.requestAnimationFrame) ? setTimeout(autoHideHeader, 250) : requestAnimationFrame(autoHideHeader);
+		}
     });
+    
+    function autoHideHeader() {
+		var currentTop = $window.scrollTop();
+        var isNavOpen = $body.hasClass('nav-in');
+        if (!isNavOpen) {
+            if (previousTop - currentTop > scrollDelta) {
+                // if scrolling up...
+                $header.removeClass('up');
+            } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
+                // if scrolling down...
+                $header.addClass('up');
+            }
+        }
+	   	previousTop = currentTop;
+		scrolling = false;
+	}
 
     // toggle sidebar
     $(document).on('click', '.site-nav-toggle, .site-nav a', function() {
