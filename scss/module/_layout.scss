@@ -14,14 +14,14 @@
 
 // main document content
 
-.document {
-
-    > .section > h1 {
-        margin-bottom: 5rem;
-    }
+.document { 
 
     > .section {
         margin-bottom: 5rem;
+
+        > h1 {
+            margin-bottom: 5rem;
+        }
 
         .toctree-wrapper {
             margin-top: 3rem;
@@ -30,9 +30,9 @@
         .toctree-wrapper .caption {
             @extend h2;
         }
-    }
 
-    > .section > .section {
-        margin-bottom: 5rem;
+        > .section {
+            margin-bottom: 8rem;
+        }
     }
 }

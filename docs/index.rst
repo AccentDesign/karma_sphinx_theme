@@ -32,15 +32,17 @@ file, and can be defined in your project's ``conf.py`` via
     }
 
 Options
--------
+^^^^^^^
 
 * ``navigation_depth`` Int. Indicate the max depth of the tree, by default, 2 levels are included.
 * ``includehidden`` Bool. Specifies if the sidebar includes toctrees marked with the ``:hidden:`` option
 * ``titles_only`` Bool. If True, removes headers within a page from the sidebar.
 
+Contents
+--------
+
 .. toctree::
    :maxdepth: 1
-   :caption: Contents
 
    admonitions
    demo
