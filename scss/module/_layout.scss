@@ -17,22 +17,13 @@
 .document { 
 
     > .section {
-        margin-bottom: 5rem;
 
         > h1 {
-            margin-bottom: 5rem;
-        }
-
-        .toctree-wrapper {
-            margin-top: 3rem;
+            margin-top: 0;
         }
 
         .toctree-wrapper .caption {
             @extend h2;
-        }
-
-        > .section {
-            margin-bottom: 8rem;
         }
     }
 }
