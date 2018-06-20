@@ -1735,6 +1735,7 @@ header .site-title{
 
 .document > .section > h1, #search-results .document > .section > h2, #search-results .document > .section .toctree-wrapper .document > .section > .caption, .document > .section .toctree-wrapper #search-results .document > .section > .caption{
   margin-top:0;
+  margin-bottom:4rem;
 }
 .site-nav code.literal,
 .site-nav tt.literal{
