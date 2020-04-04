@@ -1,3 +1,5 @@
+![Docs](https://github.com/AccentDesign/karma_sphinx_theme/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master)
+
 # Karma Sphinx Theme
 
 A simple responsive theme for sphinx. This theme is in it's early stage of development so only 
