@@ -56,7 +56,7 @@ $(document).ready(function(){
 
         // animate scroll
         $('html, body').animate({
-            scrollTop: $(this.hash).offset().top - offset
+            scrollTop: $(this.hash.replace( /(:|\.|\[|\]|,|=|@)/g, "\\$1" )).offset().top - offset
           }, 200, function(){
         });
     });
