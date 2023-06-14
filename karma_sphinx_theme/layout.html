@@ -38,7 +38,9 @@
 
   {% endif %}
 
-  <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+  {%- for style in styles %}
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+  {%- endfor %}
   <link rel="stylesheet" href="{{ pathto('_static/css/custom.css', 1) }}" type="text/css" />
   <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
   {%- for css in css_files %}
@@ -166,7 +168,7 @@
         {%- endif %}
         </div>
     </div>
-  {%- endblock %}  
+  {%- endblock %}
 
 </body>
 </html>
